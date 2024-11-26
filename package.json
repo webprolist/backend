@@ -1,7 +1,10 @@
 {
   "scripts": {
-    "start": "nodemon",
-    "dev": "tsx watch src/index.ts"
+    "build": "npm install && npx tsc",
+    "start:dev": "npm run build && cross-env NODE_ENV=development node dist/index.js",
+    "start:prod": "npm run build && cross-env NODE_ENV=production node dist/index.js",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
@@ -13,8 +16,10 @@
   "devDependencies": {
     "@types/node": "^20.17.6",
     "@types/pg": "^8.11.10",
+    "cross-env": "^7.0.3",
     "drizzle-kit": "^0.28.1",
     "nodemon": "^3.1.7",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "tsx": "^4.7.1",
     "typescript": "^5.6.3"
