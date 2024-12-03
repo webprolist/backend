@@ -2,4 +2,4 @@
 .gitignore
 *.md
 node_modules
-.env
+.envglobal-bundle.pem
