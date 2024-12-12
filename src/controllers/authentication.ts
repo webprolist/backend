@@ -51,7 +51,7 @@ export const login = async (c: Context) => {
     const result = await getUserByEmail(email);
 
     if (!result || result.length === 0) {
-      return c.json({ error: "getUserByEmail Error" }, 400);
+      return c.json({ error: "사용자가 등록되지 않았습니다." }, 400);
     }
 
     const user = result[0];

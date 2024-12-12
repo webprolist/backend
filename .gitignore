@@ -7,7 +7,15 @@
 .idea/workspace.xml
 .idea/usage.statistics.xml
 .idea/shelf
-global-bundle.pem
+dist
+app.http
+db.sql
+
+# pem
+*.pem
+
+# sh
+*.sh
 
 # deps
 node_modules/
@@ -15,6 +23,7 @@ node_modules/
 # env
 .env
 .env.production
+db.env
 
 # logs
 logs/
